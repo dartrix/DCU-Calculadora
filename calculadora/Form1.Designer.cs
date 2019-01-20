@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.botonRedondo17 = new calculadora.BotonRedondo();
             this.botonRedondo18 = new calculadora.BotonRedondo();
             this.botonRedondo19 = new calculadora.BotonRedondo();
@@ -48,10 +51,39 @@
             this.botonRedondo3 = new calculadora.BotonRedondo();
             this.botonRedondo2 = new calculadora.BotonRedondo();
             this.botonRedondo1 = new calculadora.BotonRedondo();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(13, 140);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 2);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoEllipsis = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(239, 57);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "0";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(12, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(239, 57);
+            this.label3.TabIndex = 22;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // botonRedondo17
             // 
@@ -67,6 +99,7 @@
             this.botonRedondo17.TabIndex = 19;
             this.botonRedondo17.Text = " =";
             this.botonRedondo17.UseVisualStyleBackColor = false;
+            this.botonRedondo17.Click += new System.EventHandler(this.botonRedondo17_Click);
             // 
             // botonRedondo18
             // 
@@ -82,6 +115,7 @@
             this.botonRedondo18.TabIndex = 18;
             this.botonRedondo18.Text = " .";
             this.botonRedondo18.UseVisualStyleBackColor = false;
+            this.botonRedondo18.Click += new System.EventHandler(this.botonRedondo18_Click);
             // 
             // botonRedondo19
             // 
@@ -128,6 +162,7 @@
             this.botonRedondo13.TabIndex = 15;
             this.botonRedondo13.Text = " +";
             this.botonRedondo13.UseVisualStyleBackColor = false;
+            this.botonRedondo13.Click += new System.EventHandler(this.botonRedondo13_Click);
             // 
             // botonRedondo14
             // 
@@ -191,6 +226,7 @@
             this.botonRedondo9.TabIndex = 11;
             this.botonRedondo9.Text = " −";
             this.botonRedondo9.UseVisualStyleBackColor = false;
+            this.botonRedondo9.Click += new System.EventHandler(this.botonRedondo9_Click);
             // 
             // botonRedondo10
             // 
@@ -254,6 +290,7 @@
             this.botonRedondo5.TabIndex = 7;
             this.botonRedondo5.Text = " ×";
             this.botonRedondo5.UseVisualStyleBackColor = false;
+            this.botonRedondo5.Click += new System.EventHandler(this.botonRedondo5_Click);
             // 
             // botonRedondo6
             // 
@@ -317,6 +354,7 @@
             this.botonRedondo4.TabIndex = 3;
             this.botonRedondo4.Text = " ÷";
             this.botonRedondo4.UseVisualStyleBackColor = false;
+            this.botonRedondo4.Click += new System.EventHandler(this.botonRedondo4_Click);
             // 
             // botonRedondo3
             // 
@@ -363,37 +401,6 @@
             this.botonRedondo1.Text = "C";
             this.botonRedondo1.UseVisualStyleBackColor = false;
             this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
-            // 
-            // label1
-            // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(13, 140);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 2);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(239, 57);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "0";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(12, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 57);
-            this.label3.TabIndex = 22;
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form1
             // 

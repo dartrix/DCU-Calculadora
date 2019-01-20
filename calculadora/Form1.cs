@@ -158,5 +158,55 @@ namespace calculadora
             }
 
         }
+
+        private void botonRedondo18_Click(object sender, EventArgs e)
+        {
+            // no funciona aun
+            if (label2.Text == "" && Char.IsNumber(label2.Text[label2.Text.Length - 1]) && label2.Text[label2.Text.Length - 1] != '.')
+            {
+                label2.Text = ".";
+            }
+            else
+            {
+                label2.Text += ".";
+            }
+        }
+
+        private void botonRedondo13_Click(object sender, EventArgs e)
+        {
+            if (label2.Text != "" && Char.IsNumber(label2.Text[label2.Text.Length - 1]) )
+            {
+                label2.Text += " + ";
+            }
+        }
+
+        private void botonRedondo9_Click(object sender, EventArgs e)
+        {
+            if (label2.Text != "" && Char.IsNumber(label2.Text[label2.Text.Length - 1]))
+            {
+                label2.Text += " - ";
+            }
+        }
+
+        private void botonRedondo5_Click(object sender, EventArgs e)
+        {
+            if (label2.Text != "" && Char.IsNumber(label2.Text[label2.Text.Length - 1]))
+            {
+                label2.Text += " × ";
+            }
+        }
+
+        private void botonRedondo4_Click(object sender, EventArgs e)
+        {
+            if (label2.Text != "" && Char.IsNumber(label2.Text[label2.Text.Length - 1]))
+            {
+                label2.Text += " ÷ ";
+            }
+        }
+
+        private void botonRedondo17_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
