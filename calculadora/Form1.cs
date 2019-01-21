@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -162,13 +163,16 @@ namespace calculadora
         private void botonRedondo18_Click(object sender, EventArgs e)
         {
             // no funciona aun
-            if (label2.Text == "" && Char.IsNumber(label2.Text[label2.Text.Length - 1]) && label2.Text[label2.Text.Length - 1] != '.')
+            if (label2.Text == "" )
             {
                 label2.Text = ".";
             }
             else
             {
-                label2.Text += ".";
+                if(Char.IsNumber(label2.Text[label2.Text.Length - 1]) && label2.Text[label2.Text.Length - 1] != '.')
+                {
+                    label2.Text += ".";
+                }
             }
         }
 
@@ -206,7 +210,68 @@ namespace calculadora
 
         private void botonRedondo17_Click(object sender, EventArgs e)
         {
+            float total = 0;
+            string valores = label2.Text.Trim();
+            if (!Char.IsNumber(valores[label2.Text.Length - 1])){
+                valores = valores.Remove(label2.Text.Length - 1, 1);
+            }
 
+            string[] datos = valores.Split(' ');
+
+            string ultvalor;
+
+            for(int i = 0; i < datos.Length; i++)
+            {
+                ultvalor = datos[i];
+
+                if (Regex.IsMatch(datos[i], @"^\d+$"))
+                {
+                    if(i < 2)
+                    {
+                        total = float.Parse(datos[i]);
+                    }
+                    else
+                    {
+                        switch (datos[i-1])
+                        {
+                            case "+":
+                                total += float.Parse(datos[i]);
+                                break;
+                            case "-":
+                                total -= float.Parse(datos[i]);
+                                break;
+                            case "×":
+                                total *= float.Parse(datos[i]);
+                                break;
+                            case "÷":
+                                total /= float.Parse(datos[i]);
+                                break;
+
+                        }
+                    }
+                }
+                
+
+            }
+
+            label2.Text = total.ToString();
+            label3.Text = valores;
+
+
+        }
+
+        private void botonRedondo20_Click(object sender, EventArgs e)
+        {
+            if(label3.Text != "")
+            {
+                label2.Text = label3.Text;
+                label3.Text = "";
+            }
+        }
+
+        private void botonRedondo2_Click(object sender, EventArgs e)
+        {
+            label2.Text = label2.Text.Remove(label2.Text.Length-1, 1);
         }
     }
 }

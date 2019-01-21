@@ -49,8 +49,8 @@
             this.botonRedondo8 = new calculadora.BotonRedondo();
             this.botonRedondo4 = new calculadora.BotonRedondo();
             this.botonRedondo3 = new calculadora.BotonRedondo();
-            this.botonRedondo2 = new calculadora.BotonRedondo();
             this.botonRedondo1 = new calculadora.BotonRedondo();
+            this.botonRedondo2 = new calculadora.BotonRedondo();
             this.SuspendLayout();
             // 
             // label1
@@ -371,21 +371,6 @@
             this.botonRedondo3.Text = " %";
             this.botonRedondo3.UseVisualStyleBackColor = false;
             // 
-            // botonRedondo2
-            // 
-            this.botonRedondo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.botonRedondo2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.botonRedondo2.FlatAppearance.BorderSize = 0;
-            this.botonRedondo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonRedondo2.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonRedondo2.ForeColor = System.Drawing.Color.White;
-            this.botonRedondo2.Location = new System.Drawing.Point(74, 151);
-            this.botonRedondo2.Name = "botonRedondo2";
-            this.botonRedondo2.Size = new System.Drawing.Size(55, 55);
-            this.botonRedondo2.TabIndex = 1;
-            this.botonRedondo2.Text = " ±";
-            this.botonRedondo2.UseVisualStyleBackColor = false;
-            // 
             // botonRedondo1
             // 
             this.botonRedondo1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
@@ -401,6 +386,22 @@
             this.botonRedondo1.Text = "C";
             this.botonRedondo1.UseVisualStyleBackColor = false;
             this.botonRedondo1.Click += new System.EventHandler(this.botonRedondo1_Click);
+            // 
+            // botonRedondo2
+            // 
+            this.botonRedondo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.botonRedondo2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.botonRedondo2.FlatAppearance.BorderSize = 0;
+            this.botonRedondo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonRedondo2.Font = new System.Drawing.Font("Leelawadee UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonRedondo2.ForeColor = System.Drawing.Color.White;
+            this.botonRedondo2.Location = new System.Drawing.Point(74, 151);
+            this.botonRedondo2.Name = "botonRedondo2";
+            this.botonRedondo2.Size = new System.Drawing.Size(55, 55);
+            this.botonRedondo2.TabIndex = 1;
+            this.botonRedondo2.Text = " ←";
+            this.botonRedondo2.UseVisualStyleBackColor = false;
+            this.botonRedondo2.Click += new System.EventHandler(this.botonRedondo2_Click);
             // 
             // Form1
             // 
@@ -445,7 +446,6 @@
         #endregion
 
         private BotonRedondo botonRedondo1;
-        private BotonRedondo botonRedondo2;
         private BotonRedondo botonRedondo3;
         private BotonRedondo botonRedondo4;
         private BotonRedondo botonRedondo5;
@@ -467,6 +467,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private BotonRedondo botonRedondo2;
     }
 }
 
