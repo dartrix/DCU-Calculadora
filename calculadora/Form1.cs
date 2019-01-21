@@ -271,7 +271,28 @@ namespace calculadora
 
         private void botonRedondo2_Click(object sender, EventArgs e)
         {
-            label2.Text = label2.Text.Remove(label2.Text.Length-1, 1);
+            if(label2.Text[label2.Text.Length-1] == ' ')
+            {
+                label2.Text = label2.Text.Remove(label2.Text.Length - 3, 3);
+            }
+            else
+            {
+                label2.Text = label2.Text.Remove(label2.Text.Length - 1, 1);
+            }
+            
+        }
+
+        private void botonRedondo3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_TextChanged(object sender, EventArgs e)
+        {
+            if(label2.Text.Length > 15)
+            {
+                label2.Text = label2.Text.Remove(15, label2.Text.Length - 15);
+            }
         }
     }
 }
